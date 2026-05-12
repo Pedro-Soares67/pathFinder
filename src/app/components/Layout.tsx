@@ -64,7 +64,7 @@ export function Layout() {
       {/* Mobile Header */}
       <div className="lg:hidden fixed top-0 left-0 right-0 h-16 bg-white border-b border-gray-200 flex items-center justify-between px-4 z-50">
         <div className="flex items-center gap-3">
-          <div className="w-10 h-10 bg-[#D32F2F] rounded-lg flex items-center justify-center">
+          <div className="w-10 h-10 bg-[#cc0000] rounded-lg flex items-center justify-center">
             <MapPin className="w-6 h-6 text-white" />
           </div>
           <h1 className="text-xl font-bold text-gray-900">PathFinder</h1>
@@ -98,7 +98,7 @@ export function Layout() {
         <div className="flex flex-col h-full">
           {/* Logo */}
           <div className="h-16 lg:h-20 flex items-center gap-3 px-6 border-b border-gray-200">
-            <div className="w-12 h-12 bg-[#D32F2F] rounded-xl flex items-center justify-center">
+            <div className="w-12 h-12 bg-[#cc0000] rounded-2xl flex items-center justify-center">
               <MapPin className="w-7 h-7 text-white" />
             </div>
             <div>
@@ -128,9 +128,9 @@ export function Layout() {
                   to={item.path}
                   onClick={() => setSidebarOpen(false)}
                   className={`
-                    flex items-center gap-3 px-4 py-3 rounded-lg transition-all
+                    flex items-center gap-3 px-4 py-3 rounded-xl transition-all
                     ${isActive
-                      ? 'bg-[#D32F2F] text-white shadow-md'
+                      ? 'bg-[#cc0000] text-white shadow-lg scale-[1.02]'
                       : 'text-gray-700 hover:bg-gray-100'
                     }
                   `}
@@ -145,7 +145,7 @@ export function Layout() {
           {/* User Info & Logout */}
           <div className="p-4 border-t border-gray-200">
             <div className="flex items-center gap-3 mb-3 px-2">
-              <div className="w-10 h-10 bg-[#FF8A65] rounded-full flex items-center justify-center">
+              <div className="w-10 h-10 bg-[#ff914d] rounded-full flex items-center justify-center">
                 <span className="text-white font-bold">JD</span>
               </div>
               <div className="flex-1 min-w-0">

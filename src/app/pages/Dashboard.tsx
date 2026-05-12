@@ -65,8 +65,8 @@ export default function Dashboard() {
               w-48 h-48 mx-auto rounded-full font-bold text-2xl
               transition-all duration-300 shadow-2xl
               ${emergencyActive
-                ? 'bg-[#B71C1C] scale-95 shadow-inner'
-                : 'bg-[#D32F2F] hover:bg-[#C62828] hover:scale-105 active:scale-95'
+                ? 'bg-[#990000] scale-95 shadow-inner'
+                : 'bg-[#cc0000] hover:bg-[#b30000] hover:scale-105 active:scale-95'
               }
               text-white flex flex-col items-center justify-center gap-3
             `}
@@ -75,11 +75,12 @@ export default function Dashboard() {
             <span>SOS</span>
           </button>
           {emergencyActive && (
-            <div className="mt-6 p-4 bg-red-50 border-2 border-[#D32F2F] rounded-xl">
-              <p className="text-[#D32F2F] font-bold text-lg">
+            <div className="mt-6 p-4 bg-red-50 border-l-4 border-[#cc0000] rounded-r-xl animate-pulse">
+              <p className="text-[#cc0000] font-bold text-lg flex items-center gap-2">
+                <AlertTriangle className="w-5 h-5"/>
                 🚨 Alerta de emergência enviado!
               </p>
-              <p className="text-gray-600">Contatos de emergência foram notificados.</p>
+              <p className="text-gray-600 ml-7">Contatos de emergência foram notificados.</p>
             </div>
           )}
         </div>
@@ -90,7 +91,7 @@ export default function Dashboard() {
         {stats.map((stat) => {
           const Icon = stat.icon;
           return (
-            <div key={stat.label} className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+            <div key={stat.label} className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-6 border-none">
               <div className="flex items-center justify-between mb-3">
                 <div className={`w-12 h-12 rounded-lg ${stat.bg} flex items-center justify-center`}>
                   <Icon className={`w-6 h-6 ${stat.color}`} />
@@ -118,7 +119,7 @@ export default function Dashboard() {
       {/* Two Column Layout */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Last Location */}
-        <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+        <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-6 border-none">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 bg-purple-50 rounded-lg flex items-center justify-center">
               <MapPin className="w-6 h-6 text-purple-600" />
@@ -141,7 +142,7 @@ export default function Dashboard() {
         </div>
 
         {/* Recent Alerts */}
-        <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+        <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-6 border-none">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center">
               <Bell className="w-6 h-6 text-orange-600" />
@@ -152,10 +153,10 @@ export default function Dashboard() {
             {recentAlerts.map((alert, index) => {
               const Icon = alert.icon;
               return (
-                <div key={index} className="p-4 bg-gray-50 rounded-lg border-l-4 border-[#FF8A65]">
+                <div key={index} className="p-4 bg-gray-50 rounded-lg border-l-4 border-[#ff914d]">
                   <div className="flex items-start gap-3">
                     <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-4 h-4 text-[#D32F2F]" />
+                      <Icon className="w-4 h-4 text-[#ff914d]" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <p className="font-medium text-gray-900">{alert.type}</p>
@@ -181,24 +182,24 @@ export default function Dashboard() {
       </div>
 
       {/* Quick Actions */}
-      <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+      <div className="bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.04)] p-6 border-none">
         <h3 className="text-xl font-bold text-gray-900 mb-4">Atalhos Rápidos</h3>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           <button className="p-4 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors text-center">
-            <MapPin className="w-8 h-8 text-[#D32F2F] mx-auto mb-2" />
+            <MapPin className="w-8 h-8 text-[#cc0000] mx-auto mb-2" />
             <span className="text-sm font-medium text-gray-900">Ver Mapa</span>
           </button>
           <button className="p-4 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors text-center">
-            <Bell className="w-8 h-8 text-[#D32F2F] mx-auto mb-2" />
+            <Bell className="w-8 h-8 text-[#cc0000] mx-auto mb-2" />
             <span className="text-sm font-medium text-gray-900">Alertas</span>
           </button>
           <button className="p-4 bg-gray-50 hover:bg-gray-100 rounded-lg transition-colors text-center">
-            <Activity className="w-8 h-8 text-[#D32F2F] mx-auto mb-2" />
+            <Activity className="w-8 h-8 text-[#cc0000] mx-auto mb-2" />
             <span className="text-sm font-medium text-gray-900">Atividade</span>
           </button>
           <button
             onClick={() => setShowMedicationAlarm(true)}
-            className="p-4 bg-[#FF8A65] hover:bg-[#FF7043] rounded-lg transition-colors text-center"
+            className="p-4 bg-[#ff914d] hover:bg-[#e68245] rounded-lg transition-colors text-center"
           >
             <Clock className="w-8 h-8 text-white mx-auto mb-2" />
             <span className="text-sm font-medium text-white">Testar Alarme</span>

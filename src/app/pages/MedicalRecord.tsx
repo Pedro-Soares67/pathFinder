@@ -45,7 +45,7 @@ export default function MedicalRecord() {
       </div>
 
       {/* QR Code Card */}
-      <div className="bg-gradient-to-r from-[#D32F2F] to-[#FF8A65] rounded-2xl shadow-lg p-6 text-white">
+      <div className="bg-gradient-to-r from-[#cc0000] to-[#FF8A65] rounded-2xl shadow-lg p-6 text-white">
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="flex-1">
             <h2 className="text-2xl font-bold mb-2">QR Code de Emergência</h2>
@@ -54,7 +54,7 @@ export default function MedicalRecord() {
             </p>
             <button
               onClick={() => setShowQR(!showQR)}
-              className="px-6 py-3 bg-white text-[#D32F2F] rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center gap-2"
+              className="px-6 py-3 bg-white text-[#cc0000] rounded-lg font-bold hover:bg-gray-100 transition-colors inline-flex items-center gap-2"
             >
               <QrCode className="w-5 h-5" />
               {showQR ? 'Ocultar QR Code' : 'Mostrar QR Code'}
@@ -130,11 +130,11 @@ export default function MedicalRecord() {
           {conditions.map((condition, index) => {
             const Icon = condition.icon;
             return (
-              <div key={index} className="p-4 bg-gray-50 rounded-lg border-l-4 border-[#D32F2F]">
+              <div key={index} className="p-4 bg-gray-50 rounded-lg border-l-4 border-[#cc0000]">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
-                      <Icon className="w-5 h-5 text-[#D32F2F]" />
+                      <Icon className="w-5 h-5 text-[#cc0000]" />
                     </div>
                     <div>
                       <p className="font-bold text-gray-900">{condition.name}</p>
@@ -178,7 +178,7 @@ export default function MedicalRecord() {
         <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center">
-              <Syringe className="w-6 h-6 text-orange-600" />
+              <Syringe className="w-6 h-6 text-#cc0000" />
             </div>
             <h3 className="text-xl font-bold text-gray-900">Alergias</h3>
           </div>
@@ -217,7 +217,7 @@ export default function MedicalRecord() {
                 <p className="text-xs text-gray-600">{contact.relationship}</p>
               </div>
               <p className="font-bold text-gray-900 mb-1">{contact.name}</p>
-              <p className="text-[#D32F2F] font-medium text-lg">{contact.phone}</p>
+              <p className="text-[#cc0000] font-medium text-lg">{contact.phone}</p>
             </div>
           ))}
         </div>
@@ -225,7 +225,7 @@ export default function MedicalRecord() {
 
       {/* Edit Button */}
       <div className="flex justify-end">
-        <button className="px-6 py-3 bg-[#D32F2F] hover:bg-[#B71C1C] text-white rounded-lg font-medium transition-colors">
+        <button className="px-6 py-3 bg-[#cc0000] hover:bg-[#B71C1C] text-white rounded-lg font-medium transition-colors">
           Editar Ficha Médica
         </button>
       </div>

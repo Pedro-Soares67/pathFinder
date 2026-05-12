@@ -61,16 +61,16 @@ export default function Alerts() {
 
   const stats = [
     { label: 'Total Hoje', value: '3', color: 'text-blue-600', bg: 'bg-blue-50' },
-    { label: 'Ativos', value: '1', color: 'text-red-600', bg: 'bg-red-50' },
+    { label: 'Ativos', value: '1', color: 'text-[#cc0000]', bg: 'bg-red-50' },
     { label: 'Resolvidos', value: '2', color: 'text-green-600', bg: 'bg-green-50' },
   ];
 
   const getPriorityColor = (priority: string) => {
     switch (priority) {
       case 'high':
-        return 'border-red-500 bg-red-50';
+        return 'border-l-[#cc0000] bg-red-50';
       case 'medium':
-        return 'border-orange-500 bg-orange-50';
+        return 'border-l-[#ff914d] bg-orange-50';
       case 'low':
         return 'border-yellow-500 bg-yellow-50';
       default:
@@ -82,7 +82,7 @@ export default function Alerts() {
     if (status === 'ativo') {
       return (
         <span className="flex items-center gap-1.5 px-3 py-1 bg-red-100 text-red-700 rounded-full text-sm font-medium">
-          <XCircle className="w-4 h-4" />
+          <XCircle className="w-4 h-4 animate-pulse" />
           Ativo
         </span>
       );
@@ -116,7 +116,7 @@ export default function Alerts() {
       {/* Filter Buttons */}
       <div className="bg-white rounded-xl shadow-md p-4 border border-gray-100">
         <div className="flex flex-wrap gap-3">
-          <button className="px-4 py-2 bg-[#D32F2F] text-white rounded-lg font-medium">
+          <button className="px-4 py-2 bg-[#cc0000] text-white rounded-lg font-medium">
             Todos
           </button>
           <button className="px-4 py-2 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg font-medium transition-colors">
@@ -148,7 +148,7 @@ export default function Alerts() {
                 <div className="flex items-start gap-4">
                   {/* Icon */}
                   <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center flex-shrink-0 shadow-sm">
-                    <Icon className="w-6 h-6 text-[#D32F2F]" />
+                    <Icon className="w-6 h-6 text-[#cc0000]" />
                   </div>
 
                   {/* Content */}
@@ -190,7 +190,7 @@ export default function Alerts() {
       </div>
 
       {/* Emergency Contact Card */}
-      <div className="bg-gradient-to-r from-[#D32F2F] to-[#FF8A65] rounded-xl shadow-lg p-6 text-white">
+      <div className="bg-gradient-to-r from-[#cc0000] to-[#ff914d] rounded-xl shadow-lg p-6 text-white">
         <div className="flex items-start justify-between">
           <div>
             <h3 className="text-xl font-bold mb-2">Precisa de Ajuda Imediata?</h3>
@@ -200,7 +200,7 @@ export default function Alerts() {
           </div>
           <Bell className="w-12 h-12 text-white/80" />
         </div>
-        <button className="px-6 py-3 bg-white text-[#D32F2F] rounded-lg font-bold hover:bg-gray-100 transition-colors">
+        <button className="px-6 py-3 bg-white text-[#cc0000] rounded-lg font-bold hover:bg-gray-100 transition-colors">
           Ir para Dashboard
         </button>
       </div>

@@ -20,8 +20,8 @@ export default function Location() {
       {/* Current Location Card */}
       <div className="bg-white rounded-2xl shadow-lg p-6 border-2 border-gray-100">
         <div className="flex items-center gap-3 mb-4">
-          <div className="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center">
-            <MapPin className="w-7 h-7 text-purple-600" />
+          <div className="w-12 h-12 bg-red-50 rounded-xl flex items-center justify-center">
+            <MapPin className="w-7 h-7 text-[#cc0000]" />
           </div>
           <div>
             <h2 className="text-2xl font-bold text-gray-900">Posição Atual</h2>
@@ -30,10 +30,10 @@ export default function Location() {
         </div>
 
         {/* Map Placeholder */}
-        <div className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 rounded-xl mb-4 relative overflow-hidden border-2 border-gray-200">
+        <div className="aspect-video bg-gradient-to-br from-gray-100 to-red-50 rounded-xl mb-4 relative overflow-hidden border-2 border-gray-200">
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
-              <div className="w-20 h-20 bg-[#D32F2F] rounded-full flex items-center justify-center mx-auto mb-4 shadow-2xl animate-pulse">
+              <div className="w-20 h-20 bg-[#D32F2F] rounded-full flex items-center justify-center mx-auto mb-4 shadow-[0_0_20px_rgba(204,0,0,0.4)] animate-pulse">
                 <MapPin className="w-12 h-12 text-white" />
               </div>
               <p className="text-gray-700 font-medium text-lg">Visualização do Mapa</p>
@@ -87,10 +87,10 @@ export default function Location() {
 
         <div className="bg-white rounded-xl shadow-md p-6 border border-gray-100">
           <div className="flex items-center gap-3 mb-2">
-            <Clock className="w-6 h-6 text-purple-600" />
+            <Clock className="w-6 h-6 text-[#ff914d]" />
             <h3 className="font-bold text-gray-900">Atualização</h3>
           </div>
-          <p className="text-2xl font-bold text-purple-600">2 min</p>
+          <p className="text-2xl font-bold text-[#ff914d]">2 min</p>
           <p className="text-sm text-gray-600 mt-1">Última atualização</p>
         </div>
       </div>

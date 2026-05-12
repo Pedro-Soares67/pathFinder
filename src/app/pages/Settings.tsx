@@ -58,7 +58,7 @@ export default function Settings() {
               <input
                 type="text"
                 defaultValue="João da Silva"
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#D32F2F] transition-colors"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#cc0000] transition-colors"
               />
             </div>
             <div>
@@ -68,7 +68,7 @@ export default function Settings() {
               <input
                 type="email"
                 defaultValue="joao.silva@email.com"
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#D32F2F] transition-colors"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#cc0000] transition-colors"
               />
             </div>
           </div>
@@ -81,7 +81,7 @@ export default function Settings() {
               <input
                 type="tel"
                 defaultValue="(11) 98765-4321"
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#D32F2F] transition-colors"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#cc0000] transition-colors"
               />
             </div>
             <div>
@@ -91,7 +91,7 @@ export default function Settings() {
               <input
                 type="date"
                 defaultValue="1958-03-15"
-                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#D32F2F] transition-colors"
+                className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#cc0000] transition-colors"
               />
             </div>
           </div>
@@ -102,7 +102,7 @@ export default function Settings() {
       <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-100">
         <div className="flex items-center gap-3 mb-8">
           <div className="w-14 h-14 bg-[#FF8A65]/10 rounded-xl flex items-center justify-center">
-            <Bell className="w-8 h-8 text-[#D32F2F]" />
+            <Bell className="w-8 h-8 text-[#cc0000]" />
           </div>
           <div>
             <h2 className="text-2xl font-bold text-gray-900">Personalização de Alertas</h2>
@@ -128,7 +128,7 @@ export default function Settings() {
               <Switch.Root
                 checked={alertSystemEnabled}
                 onCheckedChange={setAlertSystemEnabled}
-                className="w-16 h-9 bg-gray-300 rounded-full relative data-[state=checked]:bg-[#D32F2F] transition-colors"
+                className="w-16 h-9 bg-gray-300 rounded-full relative data-[state=checked]:bg-[#cc0000] transition-colors"
               >
                 <Switch.Thumb className="block w-7 h-7 bg-white rounded-full transition-transform translate-x-1 data-[state=checked]:translate-x-8 shadow-lg" />
               </Switch.Root>
@@ -147,9 +147,9 @@ export default function Settings() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <div className={`w-12 h-12 rounded-lg flex items-center justify-center transition-colors ${
-                        soundAlertsEnabled ? 'bg-[#D32F2F]/10' : 'bg-gray-200'
+                        soundAlertsEnabled ? 'bg-[#cc0000]/10' : 'bg-gray-200'
                       }`}>
-                        <Speaker className={`w-7 h-7 ${soundAlertsEnabled ? 'text-[#D32F2F]' : 'text-gray-400'}`} />
+                        <Speaker className={`w-7 h-7 ${soundAlertsEnabled ? 'text-[#cc0000]' : 'text-gray-400'}`} />
                       </div>
                       <div>
                         <p className="text-lg font-bold text-gray-900">Alertas Sonoros</p>
@@ -159,7 +159,7 @@ export default function Settings() {
                     <Switch.Root
                       checked={soundAlertsEnabled}
                       onCheckedChange={setSoundAlertsEnabled}
-                      className="w-16 h-9 bg-gray-300 rounded-full relative data-[state=checked]:bg-[#D32F2F] transition-colors"
+                      className="w-16 h-9 bg-gray-300 rounded-full relative data-[state=checked]:bg-[#cc0000] transition-colors"
                     >
                       <Switch.Thumb className="block w-7 h-7 bg-white rounded-full transition-transform translate-x-1 data-[state=checked]:translate-x-8 shadow-lg" />
                     </Switch.Root>
@@ -171,9 +171,9 @@ export default function Settings() {
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
                       <div className={`w-12 h-12 rounded-lg flex items-center justify-center transition-colors ${
-                        vibrationAlertsEnabled ? 'bg-[#D32F2F]/10' : 'bg-gray-200'
+                        vibrationAlertsEnabled ? 'bg-[#cc0000]/10' : 'bg-gray-200'
                       }`}>
-                        <Hand className={`w-7 h-7 ${vibrationAlertsEnabled ? 'text-[#D32F2F]' : 'text-gray-400'}`} />
+                        <Hand className={`w-7 h-7 ${vibrationAlertsEnabled ? 'text-[#cc0000]' : 'text-gray-400'}`} />
                       </div>
                       <div>
                         <p className="text-lg font-bold text-gray-900">Alertas Táteis (Vibração)</p>
@@ -183,7 +183,7 @@ export default function Settings() {
                     <Switch.Root
                       checked={vibrationAlertsEnabled}
                       onCheckedChange={setVibrationAlertsEnabled}
-                      className="w-16 h-9 bg-gray-300 rounded-full relative data-[state=checked]:bg-[#D32F2F] transition-colors"
+                      className="w-16 h-9 bg-gray-300 rounded-full relative data-[state=checked]:bg-[#cc0000] transition-colors"
                     >
                       <Switch.Thumb className="block w-7 h-7 bg-white rounded-full transition-transform translate-x-1 data-[state=checked]:translate-x-8 shadow-lg" />
                     </Switch.Root>
@@ -303,7 +303,7 @@ export default function Settings() {
                     ? 'bg-green-600 border-green-600 text-white shadow-lg'
                     : (!soundAlertsEnabled && !vibrationAlertsEnabled)
                     ? 'bg-gray-200 border-gray-300 text-gray-500 cursor-not-allowed'
-                    : 'bg-white border-2 border-[#D32F2F] text-[#D32F2F] hover:bg-[#D32F2F] hover:text-white'
+                    : 'bg-white border-2 border-[#cc0000] text-[#cc0000] hover:bg-[#cc0000] hover:text-white'
                   }
                 `}
               >
@@ -342,7 +342,7 @@ export default function Settings() {
             <Switch.Root
               checked={notificationsEnabled}
               onCheckedChange={setNotificationsEnabled}
-              className="w-14 h-8 bg-gray-300 rounded-full relative data-[state=checked]:bg-[#D32F2F] transition-colors"
+              className="w-14 h-8 bg-gray-300 rounded-full relative data-[state=checked]:bg-[#cc0000] transition-colors"
             >
               <Switch.Thumb className="block w-6 h-6 bg-white rounded-full transition-transform translate-x-1 data-[state=checked]:translate-x-7" />
             </Switch.Root>
@@ -359,7 +359,7 @@ export default function Settings() {
             <Switch.Root
               checked={autoEmergency}
               onCheckedChange={setAutoEmergency}
-              className="w-14 h-8 bg-gray-300 rounded-full relative data-[state=checked]:bg-[#D32F2F] transition-colors"
+              className="w-14 h-8 bg-gray-300 rounded-full relative data-[state=checked]:bg-[#cc0000] transition-colors"
             >
               <Switch.Thumb className="block w-6 h-6 bg-white rounded-full transition-transform translate-x-1 data-[state=checked]:translate-x-7" />
             </Switch.Root>
@@ -388,7 +388,7 @@ export default function Settings() {
             <Switch.Root
               checked={soundEnabled}
               onCheckedChange={setSoundEnabled}
-              className="w-14 h-8 bg-gray-300 rounded-full relative data-[state=checked]:bg-[#D32F2F] transition-colors"
+              className="w-14 h-8 bg-gray-300 rounded-full relative data-[state=checked]:bg-[#cc0000] transition-colors"
             >
               <Switch.Thumb className="block w-6 h-6 bg-white rounded-full transition-transform translate-x-1 data-[state=checked]:translate-x-7" />
             </Switch.Root>
@@ -404,7 +404,7 @@ export default function Settings() {
               max="100"
               value={volumeLevel}
               onChange={(e) => setVolumeLevel(Number(e.target.value))}
-              className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#D32F2F]"
+              className="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-[#cc0000]"
             />
           </div>
 
@@ -419,7 +419,7 @@ export default function Settings() {
             <Switch.Root
               checked={vibrationEnabled}
               onCheckedChange={setVibrationEnabled}
-              className="w-14 h-8 bg-gray-300 rounded-full relative data-[state=checked]:bg-[#D32F2F] transition-colors"
+              className="w-14 h-8 bg-gray-300 rounded-full relative data-[state=checked]:bg-[#cc0000] transition-colors"
             >
               <Switch.Thumb className="block w-6 h-6 bg-white rounded-full transition-transform translate-x-1 data-[state=checked]:translate-x-7" />
             </Switch.Root>
@@ -470,7 +470,7 @@ export default function Settings() {
             <Switch.Root
               checked={locationEnabled}
               onCheckedChange={setLocationEnabled}
-              className="w-14 h-8 bg-gray-300 rounded-full relative data-[state=checked]:bg-[#D32F2F] transition-colors"
+              className="w-14 h-8 bg-gray-300 rounded-full relative data-[state=checked]:bg-[#cc0000] transition-colors"
             >
               <Switch.Thumb className="block w-6 h-6 bg-white rounded-full transition-transform translate-x-1 data-[state=checked]:translate-x-7" />
             </Switch.Root>
@@ -487,7 +487,7 @@ export default function Settings() {
         <button className="px-6 py-3 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-lg font-medium transition-colors">
           Cancelar
         </button>
-        <button className="px-6 py-3 bg-[#D32F2F] hover:bg-[#B71C1C] text-white rounded-lg font-medium transition-colors flex items-center gap-2">
+        <button className="px-6 py-3 bg-[#cc0000] hover:bg-[#B71C1C] text-white rounded-lg font-medium transition-colors flex items-center gap-2">
           <Save className="w-5 h-5" />
           Salvar Configurações
         </button>
