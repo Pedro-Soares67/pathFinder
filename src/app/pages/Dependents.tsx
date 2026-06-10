@@ -1,4 +1,5 @@
 import { Users, MapPin, Bell, Battery, Plus, AlertTriangle, CheckCircle, Edit, Trash2 } from 'lucide-react';
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -18,11 +19,26 @@ interface DependentData {
   gpsStatus?: 'online' | 'offline';
   batteryLevel?: number;
   lastAlert?: string | null;
+=======
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+
+interface DependentData {
+  id: string;
+  name: string;
+  relationship: string;
+  photo: string;
+  deviceId: string;
+  gpsStatus: 'online' | 'offline';
+  batteryLevel: number;
+  lastAlert: string | null;
+>>>>>>> eec4164bfe7b1d30c11735ac71610c68f0eabfdb
   alertType?: 'warning' | 'critical' | 'info';
 }
 
 export default function Dependents() {
   const [showAddModal, setShowAddModal] = useState(false);
+<<<<<<< HEAD
   
   // Começa como uma lista vazia para receber os dados do banco
   const [dependents, setDependents] = useState<DependentData[]>([]);
@@ -93,6 +109,44 @@ export default function Dependents() {
   };
 
   const getBatteryColor = (level: number = 100) => {
+=======
+  const [dependents] = useState<DependentData[]>([
+    {
+      id: '1',
+      name: 'João Silva',
+      relationship: 'Eu',
+      photo: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop',
+      deviceId: 'PF-2026',
+      gpsStatus: 'online',
+      batteryLevel: 87,
+      lastAlert: null,
+    },
+    {
+      id: '2',
+      name: 'Maria Silva',
+      relationship: 'Mãe',
+      photo: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop',
+      deviceId: 'PF-2025',
+      gpsStatus: 'online',
+      batteryLevel: 45,
+      lastAlert: 'Medicamento atrasado',
+      alertType: 'critical',
+    },
+    {
+      id: '3',
+      name: 'Pedro Silva',
+      relationship: 'Pai',
+      photo: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop',
+      deviceId: 'PF-2024',
+      gpsStatus: 'offline',
+      batteryLevel: 12,
+      lastAlert: 'GPS desconectado',
+      alertType: 'warning',
+    },
+  ]);
+
+  const getBatteryColor = (level: number) => {
+>>>>>>> eec4164bfe7b1d30c11735ac71610c68f0eabfdb
     if (level > 50) return 'text-green-600 bg-green-50';
     if (level > 20) return 'text-orange-600 bg-orange-50';
     return 'text-red-600 bg-red-50';
@@ -166,6 +220,7 @@ export default function Dependents() {
             key={dependent.id}
             className="bg-white rounded-xl shadow-md overflow-hidden border-2 border-gray-100 hover:border-[#FF8A65] transition-all hover:shadow-lg"
           >
+<<<<<<< HEAD
             {/* Header with Background Gradient */}
             <div className="relative h-32 bg-gradient-to-br from-[#D32F2F] to-[#FF8A65]">
               <div className="absolute -bottom-12 left-1/2 -translate-x-1/2">
@@ -173,15 +228,31 @@ export default function Dependents() {
                 <div className="w-24 h-24 rounded-full bg-gray-200 border-4 border-white shadow-lg flex items-center justify-center text-gray-500 font-bold text-2xl">
                   {dependent.nome.charAt(0)}
                 </div>
+=======
+            {/* Header with Photo */}
+            <div className="relative h-32 bg-gradient-to-br from-[#D32F2F] to-[#FF8A65]">
+              <div className="absolute -bottom-12 left-1/2 -translate-x-1/2">
+                <img
+                  src={dependent.photo}
+                  alt={dependent.name}
+                  className="w-24 h-24 rounded-full object-cover border-4 border-white shadow-lg"
+                />
+>>>>>>> eec4164bfe7b1d30c11735ac71610c68f0eabfdb
               </div>
             </div>
 
             {/* Content */}
             <div className="pt-14 p-6">
               <div className="text-center mb-4">
+<<<<<<< HEAD
                 <h3 className="text-xl font-bold text-gray-900 mb-1">{dependent.nome}</h3>
                 <p className="text-gray-600">Gênero: {dependent.genero || 'Não inf.'}</p>
                 <p className="text-sm text-gray-500 mt-1">CPF: {dependent.cpf || 'Sem CPF'}</p>
+=======
+                <h3 className="text-xl font-bold text-gray-900 mb-1">{dependent.name}</h3>
+                <p className="text-gray-600">{dependent.relationship}</p>
+                <p className="text-sm text-gray-500 mt-1">{dependent.deviceId}</p>
+>>>>>>> eec4164bfe7b1d30c11735ac71610c68f0eabfdb
               </div>
 
               {/* Status Indicators */}
@@ -283,7 +354,11 @@ export default function Dependents() {
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-50 w-[90%] max-w-lg"
             >
+<<<<<<< HEAD
               <div className="bg-white rounded-2xl shadow-2xl p-8 max-h-[85vh] overflow-y-auto">
+=======
+              <div className="bg-white rounded-2xl shadow-2xl p-8">
+>>>>>>> eec4164bfe7b1d30c11735ac71610c68f0eabfdb
                 <div className="flex items-center justify-between mb-6">
                   <h2 className="text-2xl font-bold text-gray-900">Cadastrar Novo Dependente</h2>
                   <button
@@ -294,17 +369,24 @@ export default function Dependents() {
                   </button>
                 </div>
 
+<<<<<<< HEAD
                 {/* Ligamos a função handleCadastrar ao formulário */}
                 <form onSubmit={handleCadastrar} className="space-y-4">
+=======
+                <form className="space-y-4">
+>>>>>>> eec4164bfe7b1d30c11735ac71610c68f0eabfdb
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
                       Nome Completo
                     </label>
                     <input
                       type="text"
+<<<<<<< HEAD
                       required
                       value={nome}
                       onChange={(e) => setNome(e.target.value)}
+=======
+>>>>>>> eec4164bfe7b1d30c11735ac71610c68f0eabfdb
                       placeholder="Ex: Maria Silva"
                       className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#D32F2F] transition-colors"
                     />
@@ -312,6 +394,7 @@ export default function Dependents() {
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
+<<<<<<< HEAD
                       Data de Nascimento
                     </label>
                     <input
@@ -319,12 +402,20 @@ export default function Dependents() {
                       required
                       value={dataNascimento}
                       onChange={(e) => setDataNascimento(e.target.value)}
+=======
+                      Parentesco
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Ex: Mãe, Pai, Avó"
+>>>>>>> eec4164bfe7b1d30c11735ac71610c68f0eabfdb
                       className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#D32F2F] transition-colors"
                     />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
+<<<<<<< HEAD
                       Gênero
                     </label>
                     <input
@@ -332,12 +423,20 @@ export default function Dependents() {
                       value={genero}
                       onChange={(e) => setGenero(e.target.value)}
                       placeholder="Ex: Feminino, Masculino"
+=======
+                      Idade
+                    </label>
+                    <input
+                      type="number"
+                      placeholder="Ex: 65"
+>>>>>>> eec4164bfe7b1d30c11735ac71610c68f0eabfdb
                       className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#D32F2F] transition-colors"
                     />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
+<<<<<<< HEAD
                       CPF
                     </label>
                     <input
@@ -345,12 +444,20 @@ export default function Dependents() {
                       value={cpf}
                       onChange={(e) => setCpf(e.target.value)}
                       placeholder="Ex: 000.000.000-00"
+=======
+                      ID do Dispositivo
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="Ex: PF-2027"
+>>>>>>> eec4164bfe7b1d30c11735ac71610c68f0eabfdb
                       className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#D32F2F] transition-colors"
                     />
                   </div>
 
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">
+<<<<<<< HEAD
                       Alergias a Medicamentos
                     </label>
                     <input
@@ -358,6 +465,13 @@ export default function Dependents() {
                       value={alergias}
                       onChange={(e) => setAlergias(e.target.value)}
                       placeholder="Ex: Dipirona, Penicilina"
+=======
+                      URL da Foto
+                    </label>
+                    <input
+                      type="url"
+                      placeholder="https://exemplo.com/foto.jpg"
+>>>>>>> eec4164bfe7b1d30c11735ac71610c68f0eabfdb
                       className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:outline-none focus:border-[#D32F2F] transition-colors"
                     />
                   </div>
@@ -385,4 +499,8 @@ export default function Dependents() {
       </AnimatePresence>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> eec4164bfe7b1d30c11735ac71610c68f0eabfdb
